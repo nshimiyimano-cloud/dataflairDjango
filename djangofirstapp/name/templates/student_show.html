@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student_Show</title>
+  </head>
+  <body>
+   
+
+  {% extends "base.html" %} 
+   {% block body_block %}
+    <div class="container">
+  
+    <h1 class="jumbotron">The Students Here at Dataflair</h1>
+    
+      <ul class="list-unstyled">
+        {% for stud in student %}
+        <li>
+          <h2>Name :{{ stud.name }}</h2>
+          <p>department: {{ stud.department}}</p>
+          <p>class: {{ stud.stud_class}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    
+</div>
+{% endblock %}
+  </body>
+</html>
